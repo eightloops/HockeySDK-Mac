@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3A99650D-9898-4519-BDC1-7BBDCFE7C208</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HockeySDK</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C8AC3B5D-13A1-4172-A56C-9FD1587CBFD6</key>
+		<string>https://github.com/eightloops/HockeySDK-Mac.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Support/HockeySDK.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C8AC3B5D-13A1-4172-A56C-9FD1587CBFD6</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/eightloops/HockeySDK-Mac.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C8AC3B5D-13A1-4172-A56C-9FD1587CBFD6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C8AC3B5D-13A1-4172-A56C-9FD1587CBFD6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HockeySDK-Mac</string>
+		</dict>
+	</array>
+</dict>
+</plist>

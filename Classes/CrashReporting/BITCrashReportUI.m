@@ -57,7 +57,8 @@ const CGFloat kDetailsHeight = 285;
 
 - (instancetype)initWithManager:(BITCrashManager *)crashManager crashReportFile:(NSString *)crashReportFile crashReport:(NSString *)crashReport logContent:(NSString *)logContent applicationName:(NSString *)applicationName askUserDetails:(BOOL)askUserDetails {
   
-  self = [super initWithWindowNibName: @"BITCrashReportUI"];
+  
+  self = [super initWithWindowNibPath:[BITHockeyBundle() pathForResource:@"BITCrashReportUI" ofType:@"nib"] owner:self];
   
   if ( self != nil) {
     _mainAppMenu = [NSApp mainMenu];
