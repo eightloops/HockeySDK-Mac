@@ -34,6 +34,8 @@
 #import "BITFeedbackManagerPrivate.h"
 #import "BITFeedbackMessageCell.h"
 
+#import "HockeySDKPrivate.h"
+
 
 @interface BITFeedbackWindowController () <NSTableViewDataSource, NSTableViewDelegate>
 
@@ -104,7 +106,7 @@
 
 
 - (id)initWithManager:(BITFeedbackManager *)feedbackManager {
-  self = [super initWithWindowNibName: @"BITFeedbackWindowController"];
+  self = [super initWithWindowNibPath:[BITHockeyBundle() pathForResource:@"BITFeedbackWindowController" ofType:@"nib"] owner:self];
   if (self) {
     _manager = feedbackManager;
     

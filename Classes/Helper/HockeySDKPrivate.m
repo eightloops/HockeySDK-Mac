@@ -38,3 +38,31 @@ NSString *const kBITHockeyErrorDomain = @"BITHockeyErrorDomain";
 NSString *const kBITDefaultUserID = @"default.BITMetaUserID";
 NSString *const kBITDefaultUserName = @"default.BITMetaUserName";
 NSString *const kBITDefaultUserEmail = @"default.BITMetaUserEmail";
+
+
+NSBundle *BITHockeyBundle(void) {
+  static NSBundle *bundle = nil;
+  static dispatch_once_t predicate;
+  dispatch_once(&predicate, ^{
+    NSString* mainBundlePath = [[NSBundle mainBundle] resourcePath];
+    NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:BITHOCKEYSDK_BUNDLE];
+    bundle = [NSBundle bundleWithPath:frameworkBundlePath];
+  });
+  return bundle;
+}
+
+NSString *BITHockeyLocalizedString(NSString *stringToken, NSString *comment) {
+  if (!stringToken) return @"";
+  
+  NSString *appSpecificLocalizationString = NSLocalizedString(stringToken, @"");
+  if (appSpecificLocalizationString && ![stringToken isEqualToString:appSpecificLocalizationString]) {
+    return appSpecificLocalizationString;
+  } else if (BITHockeyBundle()) {
+    NSString *bundleSpecificLocalizationString = NSLocalizedStringFromTableInBundle(stringToken, @"HockeySDK", BITHockeyBundle(), @"");
+    if (bundleSpecificLocalizationString)
+      return bundleSpecificLocalizationString;
+    return stringToken;
+  } else {
+    return stringToken;
+  }
+}
